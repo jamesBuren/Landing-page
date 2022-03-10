@@ -1,0 +1,108 @@
+%button {
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+}
+
+.nav { /* make height smaller? */
+    min-height: 80px;
+    min-width: 500px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: 0.5fr;
+    column-gap: 15px;
+}
+
+.nav__logo {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+.logo {
+    font-family: Lato;
+    font-style: 900;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 62px;
+    /* identical to box height, or 258% */
+    letter-spacing: 0.15em;
+    color: #145967;
+}
+
+.logo__surfs {
+    font-family: Lato;
+    font-style: 400;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 62px;
+    /* identical to box height, or 258% */
+
+    letter-spacing: 0.15em;
+
+    color: #145967;
+}
+
+.nav__li {
+    list-style: none;
+}
+
+.nav__list { /*get ridd of ul inline 40px padding */
+    grid-column: 8 / 11;
+    grid-row: 1 / 2;
+    white-space: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    column-gap: 10px;
+    // display: flex;
+    // justify-content: space-around;
+    // flex-direction: row;
+    // place-items: center;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    /* identical to box height, or 200% */
+    color: #2F281E;
+}
+
+.nav__link:hover {
+    color: #2f281e80;
+    transition: all .5s linear;
+}
+
+.nav__btn {
+    grid-column: 11 / 12;
+    grid-row: 1 / 2;
+    display: grid;
+    place-items: center;
+    margin-left: 10px;
+}
+
+.btn {
+    @extend %button;
+    padding: 10px 30px;
+    white-space: nowrap;
+    background-color: #F9BE28;
+}
+
+.btn:hover {
+    background-color: #F9BE28;
+    // transition: all .5s linear;
+    transform: scale(1.2);
+}
